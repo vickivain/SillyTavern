@@ -1,9 +1,5 @@
 /*will apply to anything 1000px or less. this catches ipads, horizontal phones, and vertical phones)*/
 @media screen and (max-width: 1000px) {
-    #send_form.compact #leftSendForm, #send_form.compact #rightSendForm {
-        flex-wrap: nowrap;
-        width: unset;
-    }
 
     .bg_button {
         font-size: 15px;
@@ -27,7 +23,9 @@
         filter: drop-shadow(2px 2px 2px #51515199);
         z-index: 30;
         overflow: hidden;
+        left: 0;
         right: 0;
+        margin: 0 auto;
         top: 50px;
         aspect-ratio: 2 / 3;
         width: fit-content;
@@ -35,11 +33,9 @@
         max-height: calc(60svh - 60px);
         max-width: 90vw;
         max-width: 90svw;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
-    /* .world_entry_thin_controls, */
+    .world_entry_thin_controls,
     #persona-management-block,
     #character_popup .flex-container {
         flex-direction: column;
@@ -67,24 +63,11 @@
         display: none;
     }
 
-    .world_entry .inline-drawer-toggle {
-        padding-bottom: 5px;
-    }
-
-    #worldInfoScanningCheckboxes {
-        flex-flow: row;
-        flex-wrap: wrap;
-    }
-
     body {
         touch-action: none;
         overflow: hidden;
         position: fixed;
 
-    }
-
-    .world_entry_form_control {
-        /* width: 100%; */
     }
 
     .drawer-content {
@@ -142,20 +125,6 @@
 
     .wi-settings {
         flex-direction: column;
-        gap: 5px !important;
-    }
-
-    .WIEntryTitleAndStatus,
-    .WIEntryHeaderControls {
-        width: 100%;
-    }
-
-    #WIEntryHeaderTitlesPC {
-        display: none;
-    }
-
-    .WIEntryHeaderTitleMobile {
-        display: block !important;
     }
 
     #character_popup,
@@ -192,8 +161,7 @@
 
     #showRawPrompt,
     #copyPromptToClipboard,
-    #groupCurrentMemberPopoutButton,
-    #summaryExtensionPopoutButton {
+    #groupCurrentMemberPopoutButton {
         display: none;
     }
 
@@ -260,14 +228,6 @@
         bottom: 0 !important;
     }
 
-    body:not(.waifuMode) #expression-wrapper {
-        visibility: hidden;
-    }
-
-    #visual-novel-wrapper {
-        position: unset !important;
-    }
-
     body.waifuMode .expression-holder {
         /*display: inline;*/
 
@@ -279,7 +239,7 @@
         left: 0;
         right: 0;
         filter: drop-shadow(2px 2px 2px #51515199);
-        z-index: 1 !important;
+        z-index: 1;
     }
 
     body.waifuMode img.expression {
@@ -305,7 +265,7 @@
         display: none;
     }
 
-    .bg_list {
+    #bg_menu_content {
         width: unset;
     }
 }
@@ -351,18 +311,19 @@
         min-width: 100px;
         min-height: 100px;
         max-height: 50vh;
-        max-width: 90vw;
+        max-width: 50vh;
+        width: 50vw;
         position: absolute;
         padding: 0;
         filter: drop-shadow(2px 2px 2px #51515199);
         z-index: 30;
         overflow: hidden;
         display: none;
+        left: 0;
         right: 0;
+        margin: 0 auto;
         top: 50px;
         aspect-ratio: 2 / 3;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .drawer25pWidth {
@@ -380,18 +341,6 @@
     .tag.excluded:after {
         top: unset;
         bottom: unset;
-    }
-
-
-    #leftSendForm,
-    #rightSendForm {
-        width: 1.15em;
-        flex-wrap: wrap;
-        height: unset;
-    }
-
-    #extensionsMenuButton {
-        order: 1;
     }
 }
 

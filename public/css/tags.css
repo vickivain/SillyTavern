@@ -1,4 +1,3 @@
-#bulk_tags_div,
 #tags_div {
     min-width: 0;
 }
@@ -13,7 +12,7 @@
 .tag_view_item {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     gap: 10px;
     margin-bottom: 5px;
 }
@@ -87,12 +86,10 @@
     align-items: flex-end;
 }
 
-#bulkTagsList,
 #tagList.tags {
     margin: 5px 0;
 }
 
-#bulkTagsList,
 #tagList .tag {
     opacity: 0.6;
 }
@@ -141,7 +138,8 @@
     filter: brightness(1);
 }
 
-.tags_view {
+.tags_view,
+.open_alternate_greetings {
     margin: 0;
     aspect-ratio: 1 / 1;
 }
